@@ -1,0 +1,25 @@
+header{
+    background: white;
+    padding: 0;
+    border-bottom: 2px solid;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    background: black;
+    color: white;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+a.logo{
+    font-weight: bold;
+    padding: 1em;
+}
