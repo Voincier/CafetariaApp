@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FoodservicesService } from '../services/food/foodservices.service';
+import { Food } from '../shared/models/Food';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from '../services/cart/cart.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,10 +10,30 @@ import { FoodservicesService } from '../services/food/foodservices.service';
 })
 export class HomeComponent implements OnInit{
 
-  foods:String[] = [];
-  constructor(private foodService:FoodservicesService) { }
+  foods:Food[] = [];
+  food!: Food;
+  constructor(private foodService:FoodservicesService,
+    private route:ActivatedRoute,
+    private activatedRoute:ActivatedRoute,
+    private cartService: CartService,
+    private router: Router) {
+      activatedRoute.params.subscribe((params) => {
+        if(params.id)
+        this.food = foodService.getFoodById(params.id);
+      })
+    }
 
   ngOnInit(): void{
-    this.foods = this.foodService.getAll();
+    this.route.params.subscribe(params => {
+      if (params.searchTerm)
+        this.foods = this.foodService.getAllFoodsBySearchTerm(params.searchTerm);
+      else
+        this.foods = this.foodService.getAll();
+    })
+  }
+
+  addToCart(){
+    this.cartService.addToCart(this.food);
+    this.router.navigateByUrl('/cart-page');
   }
 }

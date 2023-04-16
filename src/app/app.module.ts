@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FoodOptionsComponent } from './services/food/food-options/food-options.component';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
+import { CartPageComponent } from './cart-page/cart-page.component';
+//import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FoodOptionsComponent
+    FoodOptionsComponent,
+    SearchComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //RatingModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
