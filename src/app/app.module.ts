@@ -9,6 +9,7 @@ import { FoodOptionsComponent } from './services/food/food-options/food-options.
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { FoodPageComponent } from './food-page/food-page.component';
 //import { RatingModule } from 'ng-starrating';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CartPageComponent } from './cart-page/cart-page.component';
     HomeComponent,
     FoodOptionsComponent,
     SearchComponent,
-    CartPageComponent
+    CartPageComponent,
+    FoodPageComponent
   ],
   imports: [
     BrowserModule,

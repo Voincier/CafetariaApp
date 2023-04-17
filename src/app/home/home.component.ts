@@ -14,14 +14,8 @@ export class HomeComponent implements OnInit{
   food!: Food;
   constructor(private foodService:FoodservicesService,
     private route:ActivatedRoute,
-    private activatedRoute:ActivatedRoute,
     private cartService: CartService,
-    private router: Router) {
-      activatedRoute.params.subscribe((params) => {
-        if(params.id)
-        this.food = foodService.getFoodById(params.id);
-      })
-    }
+    private router: Router) { }
 
   ngOnInit(): void{
     this.route.params.subscribe(params => {

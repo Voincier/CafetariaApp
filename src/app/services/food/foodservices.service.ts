@@ -25,7 +25,7 @@ export class FoodservicesService {
         favorite: false,
         origins: ['Thailand'],
         stars: 4.0,
-        imageUrl: 'assets/images/friedricePic.jpg',
+        imageUrl: 'assets/images/food-1.jpg',
         tags: ['Food', 'Rice'],
       },
       {
@@ -36,7 +36,7 @@ export class FoodservicesService {
         favorite: false,
         origins: ['Italy'],
         stars: 4.6,
-        imageUrl: 'assets/images/pizzaPic (225x225).jpg',
+        imageUrl: 'assets/images/food-2.jpg',
         tags: ['Food', 'Pizza'],
       },
       {
@@ -47,7 +47,7 @@ export class FoodservicesService {
         favorite: false,
         origins: ['American'],
         stars: 4.5,
-        imageUrl: 'assets/images/steakPic (225x225).jpg',
+        imageUrl: 'assets/images/food-3.jpg',
         tags: ['Food', 'Steak'],
       },
       {
@@ -58,7 +58,7 @@ export class FoodservicesService {
         favorite: false,
         origins: ['American'],
         stars: 4.0,
-        imageUrl: 'assets/images/teaPic.jpg',
+        imageUrl: 'assets/images/food-4.jpg',
         tags: ['Drink', 'Tea'],
       },
       {
@@ -69,7 +69,7 @@ export class FoodservicesService {
         favorite: false,
         origins: ['Italy'],
         stars : 4.7,
-        imageUrl: 'assets/images/pannacottaPic.jpg',
+        imageUrl: 'assets/images/food-5.jpg',
         tags: ['Dessert'],
       },
       {
@@ -80,9 +80,9 @@ export class FoodservicesService {
         favorite: false,
         origins: ['Italy'],
         stars: 4.7,
-        imageUrl: 'assets/images/tiramisuPic.jpg',
+        imageUrl: 'assets/images/food-6.jpg',
         tags: ['Dessert'],
       },
-    ]
+    ];
   }
 }

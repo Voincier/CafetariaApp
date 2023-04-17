@@ -4,7 +4,7 @@ export class CartItem{
     constructor(food:Food){
         this.food = food;
     }
-    food: Food;
+    food:Food;
     quantity:number = 1;
 
     get price():number{
